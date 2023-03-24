@@ -16,6 +16,19 @@ export class AppComponent {
     {"nom":"Cornebise","prenom":"Julien","age":16},
     {"nom":"Martin","prenom":"Henri","age":15},
   ]
-
-
+choixClasse(isFirst:boolean,isLast:boolean, isEven:boolean)
+{
+  var ma_classe:string="";
+  if (isFirst||isLast){
+    ma_classe="first_last ";
+  }
+  if (isEven){
+    ma_classe+="pair";
+  }
+  else{
+    ma_classe+="impair"
+  }
+ 
+  return ma_classe;
+}
 }

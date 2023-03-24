@@ -36,14 +36,19 @@
 </div>
 
 <table>
+    <th>id</th>
+    <th>Nom</th>
+    <th>Prenom</th>
+    <th>Age</th> 
+  <tr *ngFor="let etu of etudiants; let i=index; let isEven=even; let f=first;let l=last " 
+  class="{{choixClasse(f,l, isEven)}} ">
+   
+      <td > {{i+1}} </td>
+      <td > {{etu.nom}} </td>
+      <td> {{etu.prenom}} </td>
+      <td> {{etu.age}} </td>
   
-<tr *ngFor="let etu of etudiants; let i=index; let e=even;let o=odd; let f=first;let l=last "  >
-  <td> {{i+1}} </td>
-  <td > {{etu.nom}} </td>
-  <td> {{etu.prenom}} </td>
-  <td> {{etu.age}} </td>
-</tr>
-
+  </tr>
 </table>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
